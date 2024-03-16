@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WindLevelCountdown : MonoBehaviour
 {
-    public float countdownTime = 10f; // Geri sayım süresi (saniye)
+    public float countdownTime = 90f; // Geri sayım süresi (saniye)
     public TextMeshProUGUI countdownText; // Geri sayım metni için UI Text bileşeni
     private float currentTime; // Şu anki geri sayım süresi
     public WindLevelEndGame end;

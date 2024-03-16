@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject PipesHolder;
     public GameObject[] Pipes;
+    public WindLevelEndGame end;
     
     [SerializeField]
     public int totalPipes = 0;
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
     int correctedPipes = 0;
     void Start()
     {
+        end = GameObject.Find("GameManager").GetComponent<WindLevelEndGame>();
+        
         totalPipes = PipesHolder.transform.childCount;
 
         Pipes = new GameObject[totalPipes];
@@ -29,7 +32,7 @@ public class GameManager : MonoBehaviour
         
         if (correctedPipes == totalPipes-8)
         {
-            Debug.Log("Victory");
+            end.Victory();
         }
     }
     

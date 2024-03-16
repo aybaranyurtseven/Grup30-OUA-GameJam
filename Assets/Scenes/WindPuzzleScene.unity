@@ -4248,7 +4248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4015d7997934104cb0fd97133ae9d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTime: 10
+  countdownTime: 90
   countdownText: {fileID: 91773470}
   end: {fileID: 0}
 --- !u!1 &1521763713
