@@ -7,7 +7,7 @@ public class LightningSpawner : MonoBehaviour
     public GameObject spotLightPrefab; // Spot ışığının prefab'ı
     public GameObject lightningPrefab; // Yıldırımın prefab'ı
     public float spotDuration = 2f; // Spot ışığının gösterim süresi (saniye)
-    public float lightningDuration = 0.5f; // Yıldırımın gösterim süresi (saniye)
+    public float lightningDuration = 1.5f; // Yıldırımın gösterim süresi (saniye)
     public float spawnInterval = 2.5f; // Yıldırım spawn aralığı (saniye)
 
     private float spawnX; // Yıldırımın spawn edileceği x konumu
