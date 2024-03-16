@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SpotLight
+  - Lightning
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -40,4 +43,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3274050573
+    locked: 0
+  - name: Midground
+    uniqueID: 3259670535
+    locked: 0
+  - name: Foreground
+    uniqueID: 801101803
+    locked: 0
+  - name: Player
+    uniqueID: 1710492541
+    locked: 0
+  - name: Lightnings
+    uniqueID: 1090466705
     locked: 0
