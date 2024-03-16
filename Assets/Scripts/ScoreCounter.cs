@@ -18,7 +18,7 @@ public class ScoreCounter : MonoBehaviour
     {
         score += amount; // Skoru artır
         // Skor metnini güncelle
-        if (score == 100)
+        if (score == 200)
         {
             end.Victory();
         }

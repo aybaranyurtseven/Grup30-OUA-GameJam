@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,12 @@ public class EndGame : MonoBehaviour
 {
     public GameObject gameOverPanel; // Oyun bittiğinde gösterilecek panel
     public GameObject victoryPanel; // Oyun bittiğinde gösterilecek panel
+
+    public void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     public void GameOver()
     {
         // Oyun bittiğinde paneli göster
@@ -24,7 +31,7 @@ public class EndGame : MonoBehaviour
     {
         Debug.Log("Selam");
         Time.timeScale = 1;
-        SceneManager.LoadScene("CatchThunderGame");
+        SceneManager.LoadScene(sceneBuildIndex:0);
 
     }
 }

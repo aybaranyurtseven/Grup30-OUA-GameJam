@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-    public float countdownTime = 10f; // Geri sayım süresi (saniye)
+    public float countdownTime = 60f; // Geri sayım süresi (saniye)
     public TextMeshProUGUI countdownText; // Geri sayım metni için UI Text bileşeni
     private float currentTime; // Şu anki geri sayım süresi
     public EndGame end;
