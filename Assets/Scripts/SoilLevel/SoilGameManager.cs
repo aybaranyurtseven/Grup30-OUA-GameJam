@@ -6,6 +6,9 @@ public class SoilGameManager : MonoBehaviour
 {
     [SerializeField] private List<EarthHill> soils;
     private EarthHill _earthHill;
+    public AudioSource clickSound;
+    public AudioSource failSound;
+    public AudioSource successSound;
 
     [SerializeField] GameObject _playButton;
     [SerializeField] GameObject _playScreen;
@@ -50,18 +53,21 @@ public class SoilGameManager : MonoBehaviour
     {
         if (type == 1)
         {
+            successSound.Play();
             _winText.SetActive(true);
             playing = false;
             
         }
         else if (type == 0)
         {
+            failSound.Play();
             _outOfTimeText.SetActive(true);
             playing = false;
             _playButton.SetActive(true);
         }
         else
         {
+            failSound.Play();
             _viperText.SetActive(true);
             playing = false;
             _playButton.SetActive(true);
@@ -104,10 +110,12 @@ public class SoilGameManager : MonoBehaviour
     public void AddScore(int soilIndex)
     {
         score += 1;
+        clickSound.Play();
         _scoreText.text = $"{score}";
         timeRemaining += 1;
         currentSoils.Remove(soils[soilIndex]);
     }
+
 
     public void Missed(int soilIndex, bool isSoil)
     {

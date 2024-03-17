@@ -9,19 +9,11 @@ public class NextLevel : MonoBehaviour
 
     void Start()
     {
-
         score = gameObject.GetComponent<ScoreManager>();
 
         if(score.score >= 30)
         {
             nextLevelPanel.SetActive(true);
         }
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
