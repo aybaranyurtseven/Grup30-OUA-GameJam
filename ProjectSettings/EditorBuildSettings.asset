@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Storyboard4.unity
     guid: d9ba8a878ccc47840822f8364acc6a99
+  - enabled: 1
+    path: Assets/Scenes/BranchingGame.unity
+    guid: 00d0313ebbb11a843957f9c383f5df27
+  - enabled: 1
+    path: Assets/Scenes/FINAL.unity
+    guid: bd2ad803dcf74a64cb2aafd1c8280da8
   m_configObjects: {}

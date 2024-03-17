@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public Button nextLevelButton;
     public GameObject startPanel;
     private bool gameStarted = false;
     public GameObject PipesHolder;
@@ -17,6 +20,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 0f;
+        
+        nextLevelButton.onClick.AddListener(NextPage);
         
         end = GameObject.Find("GameManager").GetComponent<WindLevelEndGame>();
         
@@ -58,5 +63,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void NextPage()
+    {
+        SceneManager.LoadScene(sceneBuildIndex: 4);
     }
 }
