@@ -28,7 +28,6 @@ public class EarthHill : MonoBehaviour
     public enum SoilType { Standart, Viper };
     SoilType soiltype;
     float hardRate = 0.25f;
-    int hearts;
     int soilIndex = 0;
 
     private IEnumerator ShowHide(Vector2 start, Vector2 end)
@@ -101,7 +100,7 @@ public class EarthHill : MonoBehaviour
                     hittable = false;
                     break;
                 case SoilType.Viper:
-                    _gameManager.GameOver(1);
+                    _gameManager.GameOver(-1);
                     break;
                 default:
                     break;
@@ -115,13 +114,11 @@ public class EarthHill : MonoBehaviour
         {
             soiltype = SoilType.Viper;
             _spriteRenderer.sprite = viperSoil;
-            hearts = 2;
         }
         else
         {
             soiltype = SoilType.Standart;
             _spriteRenderer.sprite = grasslessSoil;
-            hearts = 1;
         }
         hittable = true;
     }

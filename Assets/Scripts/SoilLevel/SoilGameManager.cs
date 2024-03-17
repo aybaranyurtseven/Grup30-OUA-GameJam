@@ -5,11 +5,14 @@ using UnityEngine;
 public class SoilGameManager : MonoBehaviour
 {
     [SerializeField] private List<EarthHill> soils;
+    private EarthHill _earthHill;
 
     [SerializeField] GameObject _playButton;
+    [SerializeField] GameObject _playScreen;
     [SerializeField] GameObject _gameUI;
     [SerializeField] GameObject _outOfTimeText;
     [SerializeField] GameObject _viperText;
+    [SerializeField] GameObject _winText;
     [SerializeField] TMPro.TextMeshProUGUI _timeText;
     [SerializeField] TMPro.TextMeshProUGUI _scoreText;
 
@@ -23,8 +26,10 @@ public class SoilGameManager : MonoBehaviour
     public void StartGame()
     {
         _playButton.SetActive(false);
+        _playScreen.SetActive(false);
         _outOfTimeText.SetActive(false);
         _viperText.SetActive(false);
+        _winText.SetActive(false);
         _gameUI.SetActive(true);
 
         for (int i = 0; i < soils.Count; i++)
@@ -43,23 +48,29 @@ public class SoilGameManager : MonoBehaviour
 
     public void GameOver(int type)
     {
-
-        if (type == 0)
+        if (type == 1)
+        {
+            _winText.SetActive(true);
+            playing = false;
+            
+        }
+        else if (type == 0)
         {
             _outOfTimeText.SetActive(true);
+            playing = false;
+            _playButton.SetActive(true);
         }
         else
         {
             _viperText.SetActive(true);
+            playing = false;
+            _playButton.SetActive(true);
         }
 
         foreach (EarthHill soil in soils)
         {
             soil.StopGame();
         }
-
-        playing = false;
-        _playButton.SetActive(true);
     }
 
     private void Update()
@@ -82,6 +93,10 @@ public class SoilGameManager : MonoBehaviour
                     currentSoils.Add(soils[index]);
                     soils[index].Activate(score / 10);
                 }
+            }
+            if (score == 75)
+            {
+                GameOver(1);
             }
         }
     }
