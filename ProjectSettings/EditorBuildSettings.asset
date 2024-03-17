@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WindPuzzleScene.unity
     guid: 1f2e9863fe6cbe0408c6e5cf31129811
+  - enabled: 1
+    path: Assets/Scenes/Storyboard3.unity
+    guid: 925b91e94ab980345bb2e1552cc34296
+  - enabled: 1
+    path: Assets/Scenes/RunnerScene.unity
+    guid: 47f328c1c30e48740b3b943d29fd2fac
+  - enabled: 1
+    path: Assets/Scenes/Storyboard4.unity
+    guid: d9ba8a878ccc47840822f8364acc6a99
   m_configObjects: {}

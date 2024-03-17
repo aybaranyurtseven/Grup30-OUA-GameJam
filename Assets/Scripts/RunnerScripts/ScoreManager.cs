@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class ScoreManager : MonoBehaviour
@@ -9,6 +11,12 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public GameObject nextLevelPanel;
     public float score;
+    public Button continueButton;
+    
+    void Start()
+    {
+        continueButton.onClick.AddListener(ShowNextPage);
+    }
     
     
     void Update()
@@ -34,6 +42,12 @@ public class ScoreManager : MonoBehaviour
                 Time.timeScale = 0;
             }
         }
+        
+    }
+    void ShowNextPage()
+    {
+        SceneManager.LoadScene(sceneBuildIndex: 6);
+        
     }
 
    
