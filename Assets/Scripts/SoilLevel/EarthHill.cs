@@ -10,6 +10,8 @@ public class EarthHill : MonoBehaviour
 
     [SerializeField] private SoilGameManager _gameManager;
 
+    AudioSource _audioSource;
+
     Vector2 startPosition = new Vector2(0f, -2.56f);
     Vector2 endPosition = Vector2.zero;
 
@@ -105,7 +107,9 @@ public class EarthHill : MonoBehaviour
                 default:
                     break;
             }
+
         }
+        
     }
     public void CreateNext()
     {
