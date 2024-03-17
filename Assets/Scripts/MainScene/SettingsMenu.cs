@@ -7,6 +7,7 @@ public class SettingsMenu : MonoBehaviour
 {
 
     public AudioMixer _audioMixer;
+    public GameObject mainMenu;
     public void SetVolume(float volume)
     {
         _audioMixer.SetFloat("Volume", volume);
@@ -20,5 +21,10 @@ public class SettingsMenu : MonoBehaviour
     public void SetFullScreen(bool fullScreen)
     {
         Screen.fullScreen = fullScreen;
+    }
+
+    public void SetActive()
+    {
+
     }
 }

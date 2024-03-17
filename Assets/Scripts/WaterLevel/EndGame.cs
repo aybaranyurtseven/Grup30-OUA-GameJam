@@ -30,6 +30,11 @@ public class EndGame : MonoBehaviour
     public void RestartLevel()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(sceneBuildIndex:0);
+        SceneManager.LoadScene(sceneBuildIndex:1);
+    }
+    
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(sceneBuildIndex:2);
     }
 }
