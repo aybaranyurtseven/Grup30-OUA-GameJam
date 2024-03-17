@@ -28,6 +28,6 @@ public class WindLevelEndGame : MonoBehaviour
     public void RestartLevel()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(sceneBuildIndex:1);
+        SceneManager.LoadScene(sceneBuildIndex:2);
     }
 }
