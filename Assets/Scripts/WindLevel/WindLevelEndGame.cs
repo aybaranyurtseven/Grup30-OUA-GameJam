@@ -10,12 +10,11 @@ public class WindLevelEndGame : MonoBehaviour
 
     public void Start()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
     }
 
     public void GameOver()
     {
-        // Oyun bittiğinde paneli göster
         gameOverPanel.SetActive(true);
         Time.timeScale = 0;
     }

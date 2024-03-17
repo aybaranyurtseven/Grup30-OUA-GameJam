@@ -29,6 +29,6 @@ public class ScoreCounter : MonoBehaviour
     private void UpdateScoreText()
     {
         // Skor metnini güncelle
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "Skor: " + score.ToString();
     }
 }

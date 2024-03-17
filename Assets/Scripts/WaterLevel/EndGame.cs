@@ -11,7 +11,7 @@ public class EndGame : MonoBehaviour
 
     public void Start()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
     }
 
     public void GameOver()
