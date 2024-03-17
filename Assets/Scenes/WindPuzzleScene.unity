@@ -442,7 +442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &203828051
 RectTransform:
   m_ObjectHideFlags: 0
@@ -791,7 +791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &424264268
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1244,10 +1244,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "TEBRIKLER RUZGARI KURTARDIN !\n\n\nOnu cok kisa bir sure icinde kurtarmayi
-    basardin !  \nartik Ruzgar da seni bir element olarak kabul ediyor cunku onun
-    kahraman\u0131 oldun :)\nAma o da ne? YOKSA ATESIN DE MI BASI DERTTE? ACELE ET
-    !"
+  m_Text: "TEBRIKLER HAVA'YI KURTARDIN !\n\n\nOnu cok kisa bir sure icinde kurtarmayi
+    basardin !  \nartik HAVA da seni bir element olarak kabul ediyor cunku onun kahraman\u0131
+    oldun :)\nAma o da ne? YOKSA ATESIN DE MI BASI DERTTE? ACELE ET !"
 --- !u!1 &694987905
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,7 +3076,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: RUZGAR'I KURTARMAYI BASARAMADIN ! :(
+  m_Text: HAVA'YI KURTARMAYI BASARAMADIN ! :(
 --- !u!1 &1136373892
 GameObject:
   m_ObjectHideFlags: 0
