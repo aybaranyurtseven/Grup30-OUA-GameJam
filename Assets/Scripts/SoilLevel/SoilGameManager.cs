@@ -56,7 +56,6 @@ public class SoilGameManager : MonoBehaviour
             successSound.Play();
             _winText.SetActive(true);
             playing = false;
-            
         }
         else if (type == 0)
         {
