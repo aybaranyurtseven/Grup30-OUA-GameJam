@@ -131,6 +131,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1313901009054005376}
     m_Modifications:
+    - target: {fileID: 150772594104530789, guid: ef82706876044e0498569431353e457e, type: 3}
+      propertyPath: m_text
+      value: "Ates'in, firtina nedeniyle tasan nehirde hayatta kalmak icin sana ihtiyaci
+        var. Onu kurtarmak i\xE7in nehirdeki engelleri atlatmalisin. Dusey eksende
+        hizlice hareket et!"
+      objectReference: {fileID: 0}
     - target: {fileID: 2020344643716682801, guid: ef82706876044e0498569431353e457e, type: 3}
       propertyPath: m_Name
       value: Start Panel

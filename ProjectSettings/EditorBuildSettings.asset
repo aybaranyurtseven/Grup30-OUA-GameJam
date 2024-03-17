@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Storyboard1.unity
+    path: Assets/Scenes/STARTStoryboard1.unity
     guid: 57d98a1f56861a341a68f6faee6c3997
   - enabled: 1
     path: Assets/Scenes/CathThunderGame.unity
