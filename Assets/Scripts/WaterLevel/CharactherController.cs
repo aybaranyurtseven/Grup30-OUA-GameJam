@@ -14,7 +14,7 @@ public class CharactherController : MonoBehaviour
     void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        r2d = GetComponent<Rigidbody2D>(); //caching 
+        r2d = GetComponent<Rigidbody2D>(); 
         _animator = GetComponent<Animator>();
         characterPos = transform.position;
         
@@ -26,7 +26,7 @@ public class CharactherController : MonoBehaviour
     }
 
     
-    void Update() //per frame 
+    void Update()  
     {
         characterPos = new Vector3(characterPos.x + (Input.GetAxis("Horizontal") * speed * Time.deltaTime), characterPos.y);
         transform.position = characterPos; 
@@ -50,8 +50,6 @@ public class CharactherController : MonoBehaviour
     
     public void PlayCollisionAnimation()
     {
-        // Karakterin çarpma animasyonunu başlat
-        // Örneğin:
         GetComponent<Animator>().SetTrigger("Collision");
     }
 }

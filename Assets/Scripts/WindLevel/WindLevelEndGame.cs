@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class WindLevelEndGame : MonoBehaviour
 {
-    public GameObject gameOverPanel; // Oyun bittiğinde gösterilecek panel
-    public GameObject victoryPanel; // Oyun bittiğinde gösterilecek panel
+    public GameObject gameOverPanel; 
+    public GameObject victoryPanel; 
 
     public void Start()
     {

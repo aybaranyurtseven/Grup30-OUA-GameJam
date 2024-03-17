@@ -7,8 +7,6 @@ public class NextLevel4 : MonoBehaviour
 {
     public Button continueButton;
     
-    
-    // Start is called before the first frame update
     void Start()
     {
         continueButton.onClick.AddListener(ShowNextPage);
@@ -18,7 +16,7 @@ public class NextLevel4 : MonoBehaviour
     {
         SceneManager.LoadScene(sceneBuildIndex: 7);
     }
-    // Update is called once per frame
+
     void Update()
     {
         

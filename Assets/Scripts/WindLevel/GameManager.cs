@@ -53,13 +53,13 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         gameStarted = true;
-        // Oyun sahnesini yüklemek için SceneManager'ı kullan
+        
         Time.timeScale = 1f;
 
         startPanel.SetActive(false);
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         

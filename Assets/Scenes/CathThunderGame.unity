@@ -3300,7 +3300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9088797377662071548, guid: 9397672a49b849c469d383a10fdec80c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.56
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 9088797377662071548, guid: 9397672a49b849c469d383a10fdec80c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3338,7 +3338,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5006560060440609262, guid: 9397672a49b849c469d383a10fdec80c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5331,7 +5332,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.11603689, y: 0.20886803}

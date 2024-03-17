@@ -14,12 +14,11 @@ public class GameStart : MonoBehaviour
     {
         Time.timeScale = 0f;
     }
-
-    // Butona tıklandığında çağrılacak fonksiyon
+    
     public void StartGame()
     {
         gameStarted = true;
-        // Oyun sahnesini yüklemek için SceneManager'ı kullan
+       
         Time.timeScale = 1f;
 
         startPanel.SetActive(false);

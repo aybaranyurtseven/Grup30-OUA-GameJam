@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class LightningSpawner : MonoBehaviour
 {
@@ -15,12 +17,18 @@ public class LightningSpawner : MonoBehaviour
 
     private void Start()
     {
-        // İlk spot ışığını oluştur ve yıldırım spawn işlemine başla
+        
+        
+    }
+
+    private void Awake()
+    {
         SpawnSpotLight();
     }
 
     private void Update()
     {
+         
         // Yıldırım spawn aralığını kontrol et
         if (!spawning)
         {
@@ -32,7 +40,7 @@ public class LightningSpawner : MonoBehaviour
     private void SpawnSpotLight()
     {
         // Spot ışığını rastgele bir konumda oluştur
-        spawnX = Random.Range(-5f, 5f);
+        spawnX = Random.Range(-4.5f, 4.5f);
         Vector2 randomSpawnPos = new Vector2(spawnX, -2f);
         GameObject spotLight = Instantiate(spotLightPrefab, randomSpawnPos, Quaternion.identity);
 
@@ -45,7 +53,6 @@ public class LightningSpawner : MonoBehaviour
 
     private void DisableSpotLight()
     {
-        // Tüm spot ışıklarını kapat
         GameObject[] spotLights = GameObject.FindGameObjectsWithTag("SpotLight");
         foreach (GameObject spotLight in spotLights)
         {
@@ -58,11 +65,9 @@ public class LightningSpawner : MonoBehaviour
         // Spot ışığının olduğu konumda yıldırımı oluştur
         Vector2 spotPos = new Vector2(spawnX, transform.position.y - 0.10f);
         GameObject lightning = Instantiate(lightningPrefab, spotPos, Quaternion.identity);
-
-        // Yıldırımın gösterim süresi boyunca bekleyip sonra yok et
+        
         Destroy(lightning, lightningDuration);
-
-        // Yıldırım spawn işlemi tamamlandı
+        
         spawning = false;
     }
 }

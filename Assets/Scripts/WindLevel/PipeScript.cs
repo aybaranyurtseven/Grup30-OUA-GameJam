@@ -20,9 +20,8 @@ public class PipeScript : MonoBehaviour
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         
-        // AudioSource bileşenini al
         audioSource = GetComponent<AudioSource>();
-        // Eğer AudioSource yoksa, ekleyelim
+        
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
@@ -40,7 +39,6 @@ public class PipeScript : MonoBehaviour
     private void OnMouseDown()
     {
         transform.Rotate(new Vector3(0, 0, 90));
-        // Ses efektini çal
         PlaySoundEffect();
         CheckPlacement();
     }
@@ -48,10 +46,10 @@ public class PipeScript : MonoBehaviour
     private void PlaySoundEffect()
     {
         audioSource.volume = 0.2f;
-        // Eğer ses efekti dosyası ve AudioSource varsa
+       
         if (pipeRotateSound != null && audioSource != null)
         {
-            // Ses efektini çal
+           
             audioSource.PlayOneShot(pipeRotateSound);
         }
     }
@@ -60,13 +58,11 @@ public class PipeScript : MonoBehaviour
     {
         float rotatedAngle = transform.eulerAngles.z;
         bool isCorrectRotation = false;
-
-        // Döndürme sonrası değeri beklenen değerlere toleranslı bir şekilde kontrol et
+        
         foreach (float expectedAngle in correctRotation)
         {
             if (Mathf.Abs(rotatedAngle - expectedAngle) < rotationTolerance)
             {
-                // Eğer beklenen açıya yakınsa, doğru işlemi gerçekleştir
                 isCorrectRotation = true;
                 break;
             }

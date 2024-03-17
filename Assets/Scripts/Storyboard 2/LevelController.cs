@@ -7,9 +7,7 @@ using UnityEngine.UI;
 public class LevelController : MonoBehaviour
 {
     public Button continueButton;
-    
-    
-    // Start is called before the first frame update
+   
     void Start()
     {
         continueButton.onClick.AddListener(ShowNextPage);
@@ -19,7 +17,6 @@ public class LevelController : MonoBehaviour
     {
         SceneManager.LoadScene(sceneBuildIndex: 3);
     }
-    // Update is called once per frame
     void Update()
     {
         

@@ -18,23 +18,19 @@ public class CountdownTimer : MonoBehaviour
 
     private void Update()
     {
-        // Zamanı azalt
         currentTime -= Time.deltaTime;
-
-        // Zamanı sıfıra düşürme durumu
+       
         if (currentTime <= 0)
         {
             currentTime = 0;
             end.GameOver();
         }
-
-        // Geri sayım metnini güncelle
+        
         UpdateCountdownText();
     }
 
     private void UpdateCountdownText()
     {
-        // Zamanı düzgün formatta göstermek için metni güncelle
         int seconds = Mathf.CeilToInt(currentTime);
         countdownText.text = "Süre: " + seconds.ToString();
     }

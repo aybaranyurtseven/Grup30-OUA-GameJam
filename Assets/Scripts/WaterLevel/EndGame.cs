@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
-    public GameObject gameOverPanel; // Oyun bittiğinde gösterilecek panel
-    public GameObject victoryPanel; // Oyun bittiğinde gösterilecek panel
+    public GameObject gameOverPanel; 
+    public GameObject victoryPanel; 
 
     public void Start()
     {
@@ -16,7 +16,6 @@ public class EndGame : MonoBehaviour
 
     public void GameOver()
     {
-        // Oyun bittiğinde paneli göster
         gameOverPanel.SetActive(true);
         Time.timeScale = 0;
     }

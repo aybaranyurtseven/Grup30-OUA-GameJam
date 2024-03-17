@@ -14,14 +14,14 @@ public class StoryboardController : MonoBehaviour
 
     void Start()
     {
-        // Başla butonuna tıklanınca ilk sayfayı göster
+        // ilk sayfayı göster
         startButton.onClick.AddListener(StartComic);
         
-        // Devam et butonuna tıklanınca bir sonraki sayfayı göster
+        // bir sonraki sayfayı göster
         continueButton.onClick.AddListener(ShowNextPage);
         
         continueButton.gameObject.SetActive(false);
-        //startButton.gameObject.SetActive(true);
+        
     }
 
     void Update()
@@ -31,18 +31,18 @@ public class StoryboardController : MonoBehaviour
 
     void StartComic()
     {
-        // Başla butonunu devre dışı bırak ve ilk sayfayı göster
+        
         startButton.gameObject.SetActive(false);
         comicPages[currentPageIndex].gameObject.SetActive(false);
         currentPageIndex++;
         comicPages[currentPageIndex].gameObject.SetActive(true);
-        // Devam et butonunu etkinleştir
+        
         continueButton.gameObject.SetActive(true);
     }
 
     void ShowNextPage()
     {
-        // Mevcut sayfayı devre dışı bırak
+        // Mevcut sayfanın görünürlüğünü kapat
         comicPages[currentPageIndex].gameObject.SetActive(false);
         
         // Bir sonraki sayfayı göster
@@ -53,7 +53,6 @@ public class StoryboardController : MonoBehaviour
         }
         else if(currentPageIndex == 8)
         {
-            // Eğer son sayfadaysak, devam et butonunu ve sayfaları kapat
             continueButton.gameObject.SetActive(false);
             SceneManager.LoadScene(sceneBuildIndex: 1);
         }

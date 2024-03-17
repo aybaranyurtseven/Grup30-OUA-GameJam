@@ -12,7 +12,7 @@ public class SoilGameManager : MonoBehaviour
     public AudioSource failSound;
     public AudioSource successSound;
 
-    public Button nextLevelButton;
+    
     [SerializeField] GameObject _playButton;
     [SerializeField] GameObject _playScreen;
     [SerializeField] GameObject _gameUI;
@@ -31,7 +31,7 @@ public class SoilGameManager : MonoBehaviour
 
     public void StartGame()
     {
-        nextLevelButton.onClick.AddListener(ShowFinalPage);
+        
         _playButton.SetActive(false);
         _playScreen.SetActive(false);
         _outOfTimeText.SetActive(false);
