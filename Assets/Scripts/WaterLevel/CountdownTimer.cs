@@ -36,6 +36,6 @@ public class CountdownTimer : MonoBehaviour
     {
         // Zamanı düzgün formatta göstermek için metni güncelle
         int seconds = Mathf.CeilToInt(currentTime);
-        countdownText.text = "Countdown: " + seconds.ToString();
+        countdownText.text = "Süre: " + seconds.ToString();
     }
 }

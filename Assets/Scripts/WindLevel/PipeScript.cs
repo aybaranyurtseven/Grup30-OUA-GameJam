@@ -13,9 +13,20 @@ public class PipeScript : MonoBehaviour
     // Döndürme toleransı
     float rotationTolerance = 0.1f;
 
+    public AudioClip pipeRotateSound;
+    private AudioSource audioSource;
+    
     private void Awake()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
+        // AudioSource bileşenini al
+        audioSource = GetComponent<AudioSource>();
+        // Eğer AudioSource yoksa, ekleyelim
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     private void Start()
@@ -29,7 +40,20 @@ public class PipeScript : MonoBehaviour
     private void OnMouseDown()
     {
         transform.Rotate(new Vector3(0, 0, 90));
+        // Ses efektini çal
+        PlaySoundEffect();
         CheckPlacement();
+    }
+    
+    private void PlaySoundEffect()
+    {
+        audioSource.volume = 0.2f;
+        // Eğer ses efekti dosyası ve AudioSource varsa
+        if (pipeRotateSound != null && audioSource != null)
+        {
+            // Ses efektini çal
+            audioSource.PlayOneShot(pipeRotateSound);
+        }
     }
 
     private void CheckPlacement()
